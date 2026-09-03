@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>PrintQueue</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🖨️ PrintQueue</h1>
+
+    <p>
+        Smart Digital Printing Queue Management
+    </p>
+
+
+    <!-- LOGIN -->
+
+    <div id="login">
+
+        <h2>Login</h2>
+
+        <input
+            id="loginEmail"
+            type="email"
+            placeholder="Email"
+        >
+
+        <input
+            id="loginPassword"
+            type="password"
+            placeholder="Password"
+        >
+
+        <button onclick="login()">
+            Login
+        </button>
+
+        <button onclick="showRegister()">
+            Register
+        </button>
+
+        <p id="loginMessage"></p>
+
+    </div>
+
+
+    <!-- REGISTER -->
+
+    <div id="register">
+
+        <h2>Student Registration</h2>
+
+        <input
+            id="name"
+            placeholder="Name"
+        >
+
+        <input
+            id="email"
+            type="email"
+            placeholder="Email"
+        >
+
+        <input
+            id="password"
+            type="password"
+            placeholder="Password"
+        >
+
+        <button onclick="register()">
+            Register
+        </button>
+
+        <button onclick="showLogin()">
+            Back to Login
+        </button>
+
+        <p id="registerMessage"></p>
+
+    </div>
+
+
+    <!-- STUDENT -->
+
+    <div id="student">
+
+        <h2>Student Dashboard</h2>
+
+        <h3 id="studentName"></h3>
+
+        <button onclick="showPrint()">
+            New Print Request
+        </button>
+
+        <button onclick="getMyRequests()">
+            My Requests
+        </button>
+
+        <button onclick="logout()">
+            Logout
+        </button>
+
+    </div>
+
+
+    <!-- PRINT -->
+
+    <div id="print">
+
+        <h2>Print Request</h2>
+
+        <input
+            id="file"
+            type="text"
+            placeholder="PDF file name"
+        >
+
+        <input
+            id="copies"
+            type="number"
+            min="1"
+            value="1"
+            placeholder="Copies"
+        >
+
+        <select id="printType">
+
+            <option>
+                Black & White
+            </option>
+
+            <option>
+                Color
+            </option>
+
+        </select>
+
+        <button onclick="submitPrint()">
+            Submit Request
+        </button>
+
+        <button onclick="showStudent()">
+            Back
+        </button>
+
+        <p id="printMessage"></p>
+
+    </div>
+
+
+    <!-- REQUESTS -->
+
+    <div id="requests">
+
+        <h2>My Print Requests</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>File</th>
+                    <th>Copies</th>
+                    <th>Type</th>
+                    <th>Queue</th>
+                    <th>Status</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="requestTable">
+
+            </tbody>
+
+        </table>
+
+        <button onclick="showStudent()">
+            Back
+        </button>
+
+    </div>
+
+
+    <!-- ADMIN -->
+
+    <div id="admin">
+
+        <h2>Admin Dashboard</h2>
+
+        <button onclick="getAdminRequests()">
+            Refresh Queue
+        </button>
+
+        <button onclick="logout()">
+            Logout
+        </button>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Queue</th>
+                    <th>Student</th>
+                    <th>File</th>
+                    <th>Copies</th>
+                    <th>Type</th>
+                    <th>Status</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="adminTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+
+</html>

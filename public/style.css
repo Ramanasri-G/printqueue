@@ -1,0 +1,111 @@
+body {
+
+    font-family: Arial;
+
+    background: #f1f5f9;
+
+    margin: 0;
+
+}
+
+.container {
+
+    width: 90%;
+
+    max-width: 900px;
+
+    margin: 40px auto;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+}
+
+input,
+select {
+
+    display: block;
+
+    width: 90%;
+
+    padding: 12px;
+
+    margin: 12px auto;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+}
+
+button {
+
+    padding: 12px 20px;
+
+    margin: 8px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background: #2563eb;
+
+    color: white;
+
+    cursor: pointer;
+
+}
+
+button:hover {
+
+    background: #1d4ed8;
+
+}
+
+table {
+
+    width: 100%;
+
+    margin-top: 25px;
+
+    border-collapse: collapse;
+
+}
+
+th,
+td {
+
+    border: 1px solid #ddd;
+
+    padding: 10px;
+
+}
+
+th {
+
+    background: #e2e8f0;
+
+}
+
+#register,
+#student,
+#print,
+#requests,
+#admin {
+
+    display: none;
+
+}
+
+#loginMessage,
+#registerMessage,
+#printMessage {
+
+    font-weight: bold;
+
+}

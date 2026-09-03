@@ -1,0 +1,39 @@
+pipeline {
+
+    agent any
+
+    stages {
+
+        stage('Install') {
+
+            steps {
+
+                bat 'npm install'
+
+            }
+
+        }
+
+        stage('Test') {
+
+            steps {
+
+                bat 'node --check server.js'
+
+            }
+
+        }
+
+        stage('Build') {
+
+            steps {
+
+                echo 'PrintQueue build successful'
+
+            }
+
+        }
+
+    }
+
+}
